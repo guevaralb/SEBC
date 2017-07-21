@@ -1,0 +1,27 @@
+docker run -e IPA_SERVER_IP=54.198.3.178 \
+-h ip-172-31-22-80.ec2.internal \
+-p 53:53/udp -p 53:53 \
+-p 80:80 -p 443:443 -p 389:389 -p 636:636 -p 88:88 -p 464:464 \
+-p 88:88/udp -p 464:464/udp -p 123:123/udp -p 7389:7389 \
+-p 9443:9443 -p 9444:9444 -p 9445:9445 \
+-v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+--tmpfs /run --tmpfs /tmp \
+-v /var/lib/ipa-data:/data:Z docker.io/freeipa/freeipa-server
+
+
+docker run --name freeipa-server-container -ti \
+   -h ipa.example.test \
+   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+   --tmpfs /run --tmpfs /tmp \
+   -v /var/lib/ipa-data:/data:Z docker.io/freeipa/freeipa-server
+
+
+docker run --name freeipa-server-container -ti \
+-h  ec2-54-198-3-178.compute-1.amazonaws.com \
+-e PASSWORD=12341234 \
+-p 53:53/udp -p 53:53 \
+-p 80:80 -p 443:443 -p 389:389 -p 636:636 -p 88:88 -p 464:464 \
+-p 88:88/udp -p 464:464/udp -p 123:123/udp -p 7389:7389 \
+-p 9443:9443 -p 9444:9444 -p 9445:9445 \
+-v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+docker.io/centos/freeipa
