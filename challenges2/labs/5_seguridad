@@ -1,0 +1,51 @@
+Seguridad : 
+
+ Esta basado en Autenticacion, Autorizacion, Accountability y Privacidad.
+
+- Autentication: 
+		POSIX
+		CM:  LDAP/AD
+		CDH: Kerberos
+
+- Autorizacion: 
+	Sentry: 
+		* SentryServer
+		* DataEngine
+		* SentryPlugin
+	Sentry se apoya en sistemas de autenticacion como LDAP o Kerberos
+	Ofrece una autorizacion unificada un punto comun de autenticación para los servicios del ecosistema hadoop
+	Esta basado en Politicas, Listas de acceso 
+	Utiliza el mismo esquema de usuarios y grupos de sistemas como LDAP y Kerberos
+	Su API permite extender sus capacidades de autorizacion a nuevos servicios
+
+
+
+- Accountability: (Auditoria disponibles por servicios)
+	
+	Proyecto 					Auditoria disponible
+
+	HDFS 						Cloudera navigator
+	MapReduce  					inferida por HDFS
+	YARN 						inferida por HDFS
+	Accumulo 					logFiles-Partialinclusionofsecurityevents;doesnotincludenon-bulkwrites
+	Flume 						LogFiles
+	HBase 						Cloudera navigator
+	HiveServer2 				AuditeventscapturedbyClouderaNavigator
+	Hue 						Inferredthroughunderlying components
+	Impala 						AuditeventscapturedbyClouderaNavigator
+	Oozie 						LogFiles 
+	Pig 						InferredthroughHDFS
+	Search	 					LogFiles
+	SentryPlugin 				Audit events captured by ClouderaNavigator
+	Spark 						InferredthroughHDFS
+	Sqoop 						LogFiles
+	Sqoop2 						LogFiles(including securityevents*)
+	ZooKeeper 					LogFiles
+	ClouderaManager 			Audit events captured by ClouderaNavigator
+	ClouderaNavigator 			AuditeventscapturedbyClouderaNavigatoritself
+	BackupandDisasterRecovery 	None
+
+- Privacidad: 
+	* Cifrado a nivel de HDFS 
+	* Cifrado a nivel de OS (Cloudera navigator encrypt)
+	* Cifrado a nivel de red TLS/SSL 
