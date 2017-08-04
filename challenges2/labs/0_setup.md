@@ -1,41 +1,36 @@
-AWS 
-
 Luis4
-i-022bb349bc84bfc50
-m4.2xlarge
+i-03f4076823b2d608d
+m4.4xlarge
 us-east-1b
-ec2-54-173-57-43.compute-1.amazonaws.com
-54.173.57.43
-# cat /etc/centos-release
-CentOS Linux release 7.3.1611 (Core) 
-
-
-Luis3
-i-0605f457ac6b6df1e
-m4.2xlarge
-us-east-1b
-ec2-54-236-4-132.compute-1.amazonaws.com
-54.236.4.132
-# cat /etc/centos-release
-CentOS Linux release 7.3.1611 (Core) 
-
-Luis2
-i-07aa31513f58df15c
-m4.2xlarge
-us-east-1b
-ec2-52-90-69-13.compute-1.amazonaws.com
-52.90.69.13
-# cat /etc/centos-release
-CentOS Linux release 7.3.1611 (Core) 
+ec2-54-204-183-201.compute-1.amazonaws.com
+54.204.183.201
+August 4, 2017 at 8:49:23 AM UTC-5
 
 Luis1
-i-0a05a762b777c73f3
-m4.2xlarge
+i-05582de36d7801b06
+m4.4xlarge
 us-east-1b
-ec2-34-230-24-146.compute-1.amazonaws.com
-34.230.24.146
-# cat /etc/centos-release
-CentOS Linux release 7.3.1611 (Core) 
+ec2-54-157-31-236.compute-1.amazonaws.com
+54.157.31.236
+August 4, 2017 at 8:46:17 AM UTC-5
+
+Luis2
+i-0977ce016b28286ea
+m4.4xlarge
+us-east-1b
+ec2-54-152-7-139.compute-1.amazonaws.com
+54.152.7.139
+August 4, 2017 at 8:47:56 AM UTC-5
+
+Luis3
+i-09a358dce99823684
+m4.4xlarge
+us-east-1b
+ec2-34-228-219-36.compute-1.amazonaws.com
+34.228.219.36
+August 4, 2017 at 8:47:56 AM UTC-5
+
+
 # Filesystem Luis1 :
 # df -h
 /dev/xvda1        80G   4,5G   76G   6% /
@@ -82,4 +77,3 @@ extras/7/x86_64                                                    CentOS-7 - Ex
 updates/7/x86_64                                                   CentOS-7 - Updates                                                                              2.130
 repolist: 24.014
 
-	
